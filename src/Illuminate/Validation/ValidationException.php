@@ -96,7 +96,7 @@ class ValidationException extends Exception
         if ($count = count($messages)) {
             $pluralized = $count === 1 ? 'error' : 'errors';
 
-            $message .= ' '.$validator->getTranslator()->get("(and :count more $pluralized)", compact('count'));
+            $message .= ' '.$validator->getTranslator()->get("validation.(and :count more $pluralized)", compact('count'));
         }
 
         return $message;
